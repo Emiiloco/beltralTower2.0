@@ -1,0 +1,521 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+.hero {
+    height: 100vh; 
+    background: linear-gradient(rgba(0, 0, 40, 0.6), rgba(0, 0, 40, 0.6)), 
+                url('mauricio-guardiano-Wlgn4naRxWQ-unsplash.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 8%;
+    align-items: center;
+}
+
+.logo img {
+    width: 220px;     
+    height: auto;     
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 5.5rem; 
+    letter-spacing: 5px;
+    line-height: 0.9;
+    font-weight: 400;
+}
+
+.hero-content h1 span {
+    font-weight: 900; 
+}
+
+
+.contact-bar {
+    margin-top: 40px;
+    background: rgba(255, 255, 255, 0.15); 
+    backdrop-filter: blur(5px);
+    display: flex;
+    gap: 50px;
+    padding: 15px 60px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.seccion-empresa {
+    padding: 80px 5%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.contenedor-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; 
+    gap: 40px;
+    align-items: center;
+}
+
+
+.imagenes-layout {
+    display: grid;
+    grid-template-columns: 4fr 1fr; 
+    gap: 15px;
+    height: 800px; 
+}
+
+.imagenes-layout img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+
+.contenido-texto h1 {
+    font-size: 3.5rem;
+    color: #000080; 
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.contenido-texto p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+
+.formulario-contacto {
+    background-color: #20316D; 
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.formulario-contacto input {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    background: rgba(255, 255, 255, 0.1); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+}
+
+
+.formulario-contacto input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+.btn-info {
+    width: 100%;
+    padding: 15px;
+    background-color: #b5d2c8; 
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-info:hover {
+    background-color: #10b981; 
+}
+
+html {
+    
+    scroll-behavior: auto !important; 
+   
+}
+
+body {
+  margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+    
+    touch-action: auto; 
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background: #20316D;
+    border-radius: 10px;
+}
+
+.staff{
+    color: #20316D ;
+}
+
+.proyectos {
+    padding: 60px 5%;
+    background-color: #fff;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; 
+}
+
+.tarjeta-propiedad {
+    width: 350px;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+
+.imagen-tag {
+    position: relative;
+    height: 250px;
+}
+
+.imagen-tag img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+
+.info-tarjeta {
+    padding: 20px;
+}
+
+.categorias {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.venta { color: #f59e0b; margin-right: 15px; } 
+.tipo { color: #999; }
+
+.info-tarjeta h3 {
+    color: #1e3a8a; 
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.detalles {
+    display: flex;
+    justify-content: space-between;
+    color: #777;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.info-tarjeta p {
+    color: #777;
+    font-size: 0.9rem;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+}
+
+
+
+
+
+.footer-logo img {
+    width: 200px;       
+    height: auto;
+    margin-bottom: 15px; 
+    display: block;      
+}
+
+
+.footer {
+    background-color: #1a237e; 
+    color: white;
+    padding: 60px 8% 20px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-col h4 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 12px;
+}
+
+.footer-col ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #34d399; 
+}
+
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-social-icons i {
+    font-size: 1.2rem;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    text-decoration: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    
+  
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+}
+
+.whatsapp-btn.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 8% 15px; 
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; 
+        gap: 15px; 
+        text-align: left;
+    }
+
+    .footer-logo img {
+        width: 110px !important; 
+        margin: 0 0 10px 0; 
+    }
+
+    .footer-logo p {
+        font-size: 0.8rem;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+
+    .footer-links-grid {
+        display: flex;
+        gap: 40px; 
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .footer-col h4 {
+        font-size: 0.75rem;
+        margin-bottom: 8px; 
+        margin-top: 5px;
+        letter-spacing: 0.5px;
+    }
+
+    .footer-col ul li {
+        margin-bottom: 4px; 
+    }
+
+    .footer-col ul li a {
+        font-size: 0.85rem;
+    }
+
+    .contacto-col p {
+        font-size: 0.85rem;
+        margin-bottom: 3px;
+    }
+
+    .footer-bottom {
+        margin-top: 15px;
+        padding-top: 12px;
+        flex-direction: row; 
+        justify-content: space-between;
+        font-size: 0.65rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .tarjeta-propiedad {
+        width: 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    
+    .navbar {
+        flex-direction: column; 
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        font-size: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem; 
+        letter-spacing: 2px;
+    }
+
+    .contact-bar {
+        flex-direction: column; 
+        gap: 10px;
+        padding: 15px 30px;
+        width: 90%; 
+    }
+
+    .contenedor-grid {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .imagenes-layout {
+        height: 350px; 
+        grid-template-columns: 1fr 1fr; 
+    }
+
+    .contenido-texto {
+        text-align: center; 
+    }
+
+    .contenido-texto h1 {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .contenido-texto p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+        margin-top: -20px; 
+        margin-bottom: 20px; 
+    }
+
+    .hero-content {
+        justify-content: center; 
+        padding-top: 0; 
+    }
+}
+
+@media (max-width: 768px) {
+    .logo img {
+        width: 160px; 
+        margin: 0 auto; 
+    }
+
+    .navbar {
+        flex-direction: column; 
+        padding: 15px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 130px; 
+    }
+    
+    .logo span {
+        font-size: 1rem; 
+    }
+}
