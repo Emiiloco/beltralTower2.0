@@ -2,214 +2,904 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>grupobriones</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Grupo Briones — Desarrollos Inmobiliarios Premium en CABA</title>
+    <meta name="description" content="Grupo Briones: desarrollos inmobiliarios de calidad en las mejores zonas de Buenos Aires. Departamentos en pozo desde USD 100.000.">
     <link rel="stylesheet" href="css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-   <header class="hero">
-    <nav class="navbar">
-        <div class="logo">
-            <img src="inline-logo-white.avif" alt="Logo"> 
-           
+
+<!-- ══ LOADER ══ -->
+<div class="page-loader" id="loader">
+    <div class="loader-logo">
+        <img src="inline-logo-white.avif" alt="Grupo Briones">
+        <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+    </div>
+</div>
+
+<!-- ══ TOP BAR ══ -->
+<div class="top-bar">
+    <div class="top-bar-inner">
+        <div class="top-bar-left">
+            <span><i class="fas fa-map-marker-alt"></i> Cerrito 1186, CABA</span>
+            <span class="tb-sep">|</span>
+            <span><i class="fas fa-clock"></i> Lun–Vie 9:00–18:00</span>
         </div>
-        <ul class="nav-links">
-            <li>
+        <div class="top-bar-right">
+            <a href="https://wa.me/5491124682070" target="_blank"><i class="fab fa-whatsapp"></i> +54 9 11 2468-2070</a>
+            <a href="mailto:contacto@grupobriones.com.ar"><i class="fas fa-envelope"></i> contacto@grupobriones.com.ar</a>
+        </div>
+    </div>
+</div>
+
+<!-- ══ HEADER / HERO ══ -->
+<header class="hero" id="inicio">
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <img src="inline-logo-white.avif" alt="Grupo Briones" class="logo-white">
+            <img src="inline-logo-white.avif" alt="Grupo Briones" class="logo-dark" style="display:none;">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#testimonios">Testimonios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#contacto" class="nav-cta"><i class="fas fa-arrow-right"></i> Invertir ahora</a></li>
         </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menú">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
 
-    
     <div class="hero-content">
-        <h1>INVERSIONES <br> <span>INMOBILIARIAS</span></h1>
-        
-        <div class="contact-bar">
-            <div class="contact-item">
-                <i class="fas fa-phone"></i> Cerrito 1186, CABA
+        <div class="hero-eyebrow reveal-hero">
+            <span class="dot"></span> Buenos Aires · Corredor Norte · Desde 2018
+        </div>
+        <h1 class="reveal-hero">
+            Inversiones<br><em>inmobiliarias</em><br>de primer nivel
+        </h1>
+        <p class="hero-sub reveal-hero">
+            Construimos el futuro de Buenos Aires. Departamentos en pozo<br>en las zonas más demandadas, con rentabilidad comprobada.
+        </p>
+        <div class="hero-actions reveal-hero">
+            <a href="#proyectos" class="btn-gold">
+                <i class="fas fa-building"></i> Ver proyectos
+            </a>
+            <a href="#contacto" class="btn-outline-white">
+                Hablar con un asesor <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+        <div class="hero-trust reveal-hero">
+            <div class="trust-item">
+                <i class="fas fa-shield-check"></i> Entrega garantizada
             </div>
-            <div class="contact-item">
-                <i class="fas fa-globe"></i> © 2026 Grupo Briones
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <i class="fas fa-award"></i> +8 años de experiencia
+            </div>
+            <div class="trust-sep"></div>
+            <div class="trust-item">
+                <i class="fas fa-star"></i> 4.9 · 200+ reseñas
             </div>
         </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
     </div>
 </header>
 
+<!-- ══ STATS COUNTER ══ -->
+<div class="stats-bar" id="statsBar">
+    <div class="stat-item">
+        <div class="stat-num" data-target="1000" data-prefix="+" data-suffix="">0</div>
+        <div class="stat-label">Departamentos entregados</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num" data-target="6" data-prefix="" data-suffix="">0</div>
+        <div class="stat-label">Proyectos activos</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num" data-target="25" data-prefix="" data-suffix="%">0</div>
+        <div class="stat-label">Valorización desde 2023</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num" data-target="8" data-prefix="" data-suffix=" años">0</div>
+        <div class="stat-label">En el mercado</div>
+    </div>
+    <div class="stat-item">
+        <div class="stat-num" data-target="100" data-prefix="" data-suffix="%">0</div>
+        <div class="stat-label">Entrega en término</div>
+    </div>
+</div>
 
-<section class="proyectos">
-    <div class="contenedor-tarjetas">
-        
-        <div class="tarjeta-propiedad">
+<!-- ══ PROYECTOS ══ -->
+<section class="section-proyectos" id="proyectos">
+    <div class="section-intro reveal">
+        <div class="section-tag"><span></span>Nuestros proyectos</div>
+        <h2>Elegí tu <em>próxima inversión</em></h2>
+        <p>Desarrollos en las zonas más demandadas del corredor norte.<br>Calidad de construcción y amenities de primer nivel.</p>
+    </div>
+
+    <!-- Filtros -->
+    <div class="filtros reveal">
+        <button class="filtro-btn active" data-filter="all">Todos</button>
+        <button class="filtro-btn" data-filter="construccion">En construcción</button>
+        <button class="filtro-btn" data-filter="entrega">Entrega inmediata</button>
+        <button class="filtro-btn" data-filter="pozo">En pozo</button>
+    </div>
+
+    <div class="contenedor-tarjetas reveal">
+
+        <div class="tarjeta-propiedad" data-cat="construccion">
             <div class="imagen-tag">
-                <img src="edificio1.avif" alt="Brigos I Recoleta">
-                <span class="tag">En construcción</span>
+                <img src="edificio1.avif" alt="Brigos I Recoleta" loading="lazy">
+                <span class="tag tag-construccion"><i class="fas fa-hard-hat"></i> En construcción</span>
+                <div class="card-overlay">
+                    <a href="#contacto" class="card-btn-overlay">Consultar ahora</a>
+                </div>
+                <div class="card-fav" title="Guardar">
+                    <i class="far fa-heart"></i>
+                </div>
             </div>
             <div class="info-tarjeta">
-                <div class="categorias">
-                    <span class="venta">Venta</span>
-                    <span class="tipo">Apartamentos</span>
+                <div class="card-top-row">
+                    <div class="categorias">
+                        <span class="venta">Venta</span>
+                        <span class="tipo">Apartamentos</span>
+                    </div>
+                    <span class="card-zona"><i class="fas fa-map-pin"></i> Recoleta</span>
                 </div>
                 <h3>Brigos I Recoleta</h3>
                 <div class="detalles">
-                    <span><i class="fas fa-ruler-combined"></i> 75m²</span>
-                    <span><i class="fas fa-bed"></i> 1 a 3 ambientes</span>
+                    <span><i class="fas fa-ruler-combined"></i> 75 m²</span>
+                    <span><i class="fas fa-th-large"></i> 1–3 amb.</span>
+                    <span><i class="fas fa-car"></i> Cochera</span>
                 </div>
-                <p><i class="fas fa-building"></i> 12 unidades disponibles</p>
+                <div class="card-amenities-mini">
+                    <span title="Gimnasio"><i class="fas fa-dumbbell"></i></span>
+                    <span title="Piscina"><i class="fas fa-swimming-pool"></i></span>
+                    <span title="SUM"><i class="fas fa-couch"></i></span>
+                    <span title="Seguridad 24h"><i class="fas fa-shield-alt"></i></span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-val">USD 115.000</span>
+                    </div>
+                    <a href="#contacto" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
 
-        <div class="tarjeta-propiedad">
+        <div class="tarjeta-propiedad featured-card" data-cat="construccion">
             <div class="imagen-tag">
-                <img src="edificio2.avif" alt="Brigos I Palermo">
-                <span class="tag">En construcción</span>
+                <img src="edificio2.avif" alt="Brigos I Palermo" loading="lazy">
+                <span class="tag tag-construccion"><i class="fas fa-hard-hat"></i> En construcción</span>
+                <div class="featured-ribbon">⭐ Destacado</div>
+                <div class="card-overlay">
+                    <a href="#contacto" class="card-btn-overlay">Consultar ahora</a>
+                </div>
+                <div class="card-fav"><i class="far fa-heart"></i></div>
             </div>
             <div class="info-tarjeta">
-                <div class="categorias">
-                    <span class="venta">Venta</span>
-                    <span class="tipo">Apartamentos</span>
+                <div class="card-top-row">
+                    <div class="categorias">
+                        <span class="venta">Venta</span>
+                        <span class="tipo">Apartamentos</span>
+                    </div>
+                    <span class="card-zona"><i class="fas fa-map-pin"></i> Palermo</span>
                 </div>
                 <h3>Brigos I Palermo</h3>
                 <div class="detalles">
-                    <span><i class="fas fa-ruler-combined"></i> 90m²</span>
-                    <span><i class="fas fa-bed"></i> 2 a 4 ambientes</span>
+                    <span><i class="fas fa-ruler-combined"></i> 90 m²</span>
+                    <span><i class="fas fa-th-large"></i> 2–4 amb.</span>
+                    <span><i class="fas fa-car"></i> Cochera</span>
                 </div>
-                <p><i class="fas fa-building"></i> 8 unidades disponibles</p>
+                <div class="card-amenities-mini">
+                    <span title="Gimnasio"><i class="fas fa-dumbbell"></i></span>
+                    <span title="Piscina"><i class="fas fa-swimming-pool"></i></span>
+                    <span title="Terraza"><i class="fas fa-umbrella-beach"></i></span>
+                    <span title="Coworking"><i class="fas fa-laptop"></i></span>
+                    <span title="Seguridad 24h"><i class="fas fa-shield-alt"></i></span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-val">USD 145.000</span>
+                    </div>
+                    <a href="#contacto" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
 
-        <div class="tarjeta-propiedad">
+        <div class="tarjeta-propiedad" data-cat="entrega">
             <div class="imagen-tag">
-                <img src="edificio3.avif" alt="Casa Huidobro">
-                <span class="tag">Entrega inmediata</span>
+                <img src="edificio3.avif" alt="Casa Huidobro" loading="lazy">
+                <span class="tag tag-entrega"><i class="fas fa-key"></i> Entrega inmediata</span>
+                <div class="card-overlay">
+                    <a href="#contacto" class="card-btn-overlay">Consultar ahora</a>
+                </div>
+                <div class="card-fav"><i class="far fa-heart"></i></div>
             </div>
             <div class="info-tarjeta">
-                <div class="categorias">
-                    <span class="venta">Venta</span>
-                    <span class="tipo">Apartamentos</span>
+                <div class="card-top-row">
+                    <div class="categorias">
+                        <span class="venta">Venta</span>
+                        <span class="tipo">Apartamentos</span>
+                    </div>
+                    <span class="card-zona"><i class="fas fa-map-pin"></i> Belgrano</span>
                 </div>
                 <h3>Casa Huidobro</h3>
                 <div class="detalles">
-                    <span><i class="fas fa-ruler-combined"></i> 60m²</span>
-                    <span><i class="fas fa-bed"></i> 1 a 2 ambientes</span>
+                    <span><i class="fas fa-ruler-combined"></i> 60 m²</span>
+                    <span><i class="fas fa-th-large"></i> 1–2 amb.</span>
+                    <span><i class="fas fa-bicycle"></i> Bicicletero</span>
                 </div>
-                <p><i class="fas fa-building"></i> 5 unidades disponibles</p>
+                <div class="card-amenities-mini">
+                    <span title="Gimnasio"><i class="fas fa-dumbbell"></i></span>
+                    <span title="SUM"><i class="fas fa-couch"></i></span>
+                    <span title="Seguridad 24h"><i class="fas fa-shield-alt"></i></span>
+                </div>
+                <div class="card-footer">
+                    <div class="card-price">
+                        <span class="price-from">Desde</span>
+                        <span class="price-val">USD 95.000</span>
+                    </div>
+                    <a href="#contacto" class="card-link">Ver más <i class="fas fa-arrow-right"></i></a>
+                </div>
             </div>
         </div>
 
     </div>
+
+    <div class="proyectos-cta reveal">
+        <p>¿Buscás algo específico? Nuestros asesores pueden mostrarte opciones que no están publicadas.</p>
+        <a href="#contacto" class="btn-navy">Consultar disponibilidad <i class="fas fa-arrow-right"></i></a>
+    </div>
 </section>
 
-
-
-
- <section class="seccion-empresa">
+<!-- ══ NOSOTROS ══ -->
+<section class="seccion-empresa" id="nosotros">
     <div class="contenedor-grid">
-        <div class="imagenes-layout">
+        <div class="imagenes-layout reveal">
             <div class="imagen-principal">
                 <img src="edificio.avif" alt="Edificio principal">
             </div>
             <div class="imagen-secundaria">
                 <img src="sorasak-KxCJXXGsv9I-unsplash.jpg" alt="Detalle edificio">
             </div>
+            <div class="img-badge">
+                <div class="img-badge-num">+1000</div>
+                <div class="img-badge-txt">dptos. entregados</div>
+            </div>
         </div>
 
-        <div class="contenido-texto">
-            <h1>Tu próximo departamento <br> en CABA desde <br> USD 100.000</h1>
-            <p>Entre Beltrán e Iván Briones, llevan más de 1000 departamentos entregados en CABA.
-                Somos especialistas en construir edificios de calidad.</p>
-            <p class="staff">Nuestro staff de ventas te ayudará a encontrar lo que mejor se adapte a tu necesidad de vivienda, o inversión.</p>
-        <div class="formulario-contacto">
-    <form>
-        <input type="text" placeholder="Nombre completo">
-        <input type="email" placeholder="Email">
-        <input type="tel" placeholder="Teléfono">
-        <button type="submit" class="btn-info">Quiero más información</button>
-    </form>
-</div>
+        <div class="contenido-texto reveal">
+            <div class="section-tag dark"><span></span>Quiénes somos</div>
+            <h2 class="empresa-titulo">Tu próximo departamento<br>en CABA<br>desde <em>USD 100.000</em></h2>
+            <p>Beltrán e Iván Briones llevan más de <strong>1.000 departamentos entregados</strong> en CABA. Son referentes del real estate argentino, reconocidos por su transparencia y por comunicar el mercado de una forma diferente.</p>
+            <p class="staff-text">Nuestro equipo de ventas te acompaña en todo el proceso, desde la primera consulta hasta la entrega de llaves.</p>
+
+            <div class="valores-grid">
+                <div class="valor-item">
+                    <div class="valor-icon"><i class="fas fa-eye"></i></div>
+                    <div>
+                        <strong>Transparencia total</strong>
+                        <p>Mostramos avances de obra en tiempo real. Sin letra chica.</p>
+                    </div>
+                </div>
+                <div class="valor-item">
+                    <div class="valor-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div>
+                        <strong>Entrega en término</strong>
+                        <p>100% de nuestros proyectos entregados en la fecha comprometida.</p>
+                    </div>
+                </div>
+                <div class="valor-item">
+                    <div class="valor-icon"><i class="fas fa-chart-line"></i></div>
+                    <div>
+                        <strong>Rentabilidad real</strong>
+                        <p>Zonas con valorización comprobada del 25–35% desde 2023.</p>
+                    </div>
+                </div>
+                <div class="valor-item">
+                    <div class="valor-icon"><i class="fas fa-handshake"></i></div>
+                    <div>
+                        <strong>Financiación flexible</strong>
+                        <p>Pagás en pesos o dólares, con distintos esquemas de cuotas.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-col">
-            <div class="footer-logo">
-                <img src="inline-logo-white.avif" alt="Grupo Briones">
-                <p>Desarrollos inmobiliarios de calidad, en la Ciudad de Buenos Aires.</p>
+<!-- ══ PROCESO DE COMPRA ══ -->
+<section class="seccion-proceso" id="proceso">
+    <div class="section-intro reveal">
+        <div class="section-tag"><span></span>Cómo invertir</div>
+        <h2>Simple, claro y <em>sin sorpresas</em></h2>
+        <p>Cuatro pasos para que tu inversión esté en marcha en menos de dos semanas.</p>
+    </div>
+    <div class="proceso-steps reveal">
+        <div class="proceso-step">
+            <div class="step-num">01</div>
+            <div class="step-icon"><i class="fas fa-comments"></i></div>
+            <h4>Primera consulta</h4>
+            <p>Completás el formulario. Un asesor especializado te contacta en menos de 24 h.</p>
+        </div>
+        <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="proceso-step">
+            <div class="step-num">02</div>
+            <div class="step-icon"><i class="fas fa-presentation"></i></div>
+            <h4>Presentación</h4>
+            <p>Te mostramos proyectos disponibles, números reales y opciones de financiación.</p>
+        </div>
+        <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="proceso-step">
+            <div class="step-num">03</div>
+            <div class="step-icon"><i class="fas fa-file-signature"></i></div>
+            <h4>Reserva</h4>
+            <p>Reservás tu unidad con un monto accesible y asegurás el precio de hoy.</p>
+        </div>
+        <div class="proceso-connector"><i class="fas fa-arrow-right"></i></div>
+        <div class="proceso-step">
+            <div class="step-num">04</div>
+            <div class="step-icon"><i class="fas fa-key"></i></div>
+            <h4>Tu departamento</h4>
+            <p>Seguimiento de obra y entrega en término. Inversión protegida.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ══ AMENITIES ══ -->
+<section class="seccion-amenities" id="amenities">
+    <div class="amenities-inner">
+        <div class="amenities-texto reveal">
+            <div class="section-tag light"><span></span>Calidad de vida</div>
+            <h2>Amenities que <em>hacen la diferencia</em></h2>
+            <p>Nuestros edificios no son solo departamentos. Son espacios diseñados para que vivir sea una experiencia completa.</p>
+            <ul class="amenities-list">
+                <li><i class="fas fa-check-circle"></i> Gimnasio equipado con vista panorámica</li>
+                <li><i class="fas fa-check-circle"></i> Piscina en rooftop o planta baja</li>
+                <li><i class="fas fa-check-circle"></i> SUM y área de eventos privada</li>
+                <li><i class="fas fa-check-circle"></i> Coworking con salas de reuniones</li>
+                <li><i class="fas fa-check-circle"></i> Parrilla individual por unidad</li>
+                <li><i class="fas fa-check-circle"></i> Seguridad 24 horas con CCTV</li>
+                <li><i class="fas fa-check-circle"></i> Cochera y bicicletero cubierto</li>
+                <li><i class="fas fa-check-circle"></i> Laundry y área de servicio</li>
+            </ul>
+            <a href="#contacto" class="btn-gold-outline">Consultar disponibilidad <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="amenities-grid reveal">
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-dumbbell"></i></div>
+                <span>Gimnasio</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-swimming-pool"></i></div>
+                <span>Piscina</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-fire"></i></div>
+                <span>Parrilla</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-laptop-house"></i></div>
+                <span>Coworking</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-couch"></i></div>
+                <span>SUM</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-shield-alt"></i></div>
+                <span>Seguridad 24h</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-car"></i></div>
+                <span>Cochera</span>
+            </div>
+            <div class="am-card">
+                <div class="am-icon"><i class="fas fa-leaf"></i></div>
+                <span>Áreas verdes</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ TESTIMONIOS ══ -->
+<section class="seccion-testimonios" id="testimonios">
+    <div class="section-intro reveal">
+        <div class="section-tag"><span></span>Testimonios</div>
+        <h2>Lo que dicen nuestros <em>inversores</em></h2>
+        <p>Más de 1.000 familias confiaron en Grupo Briones. Estas son sus historias.</p>
+    </div>
+    <div class="testimonios-grid reveal">
+
+        <div class="testimonio-card">
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"Empecé siguiendo a Beltrán en Instagram. Meses después invertí en Brigos I Palermo. El proceso fue 100% transparente y la rentabilidad superó todas mis expectativas."</p>
+            <div class="t-author">
+                <div class="t-avatar">MG</div>
+                <div>
+                    <strong>Martín González</strong>
+                    <span>Inversor · Palermo</span>
+                </div>
             </div>
         </div>
 
-        <div class="footer-col">
-            <h4>NAVEGACIÓN</h4>
-            <ul>
-                <li><a href="#">Propiedades</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Prensa</a></li>
-                <li><a href="#">Eventos</a></li>
-                <li><a href="#">FAQs</a></li>
-            </ul>
+        <div class="testimonio-card featured-test">
+            <div class="t-quote"><i class="fas fa-quote-left"></i></div>
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"Invertí antes de ver los renders. El historial de Grupo Briones me dio la confianza. El departamento en Recoleta se valorizó 22% desde que firmé la reserva."</p>
+            <div class="t-author">
+                <div class="t-avatar">SL</div>
+                <div>
+                    <strong>Sofía Larrea</strong>
+                    <span>Inversora · Recoleta</span>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-col">
-            <h4>REDES</h4>
-            <ul>
-                <li><a href="https://www.instagram.com/grupobriones/?hl=es-la">Instagram</a></li>
-                <li><a href="https://www.tiktok.com/@grupobriones?is_from_webapp=1&sender_device=pc">Tiktok</a></li>
-                <li><a href="https://youtube.com/@beltranbriones?si=cKOx2PRyBXBBMOSC">Youtube</a></li>
-                <li><a href="https://www.facebook.com/beltran.briones.9">Facebook</a></li>
-                <li><a href="https://wa.me/5491124682070">Whatsapp</a></li>
-            </ul>
+        <div class="testimonio-card">
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"Segunda compra con Grupo Briones. La primera experiencia fue tan positiva —entregaron antes de lo prometido— que no dudé en reinvertir."</p>
+            <div class="t-author">
+                <div class="t-avatar">CR</div>
+                <div>
+                    <strong>Carlos Ruiz</strong>
+                    <span>Inversor reincidente · Belgrano</span>
+                </div>
+            </div>
         </div>
 
-        <div class="footer-col">
-            <h4>CONTACTO</h4>
-            <p>Cerrito 1186, CABA</p>
-            <p>+54 9 11 2468-2070</p>
-            <p>contacto@grupobriones.com.ar</p>
+        <div class="testimonio-card">
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"El equipo de ventas nos guió en cada paso. Nunca me sentí solo en el proceso. Hoy tengo mi depto en Palermo y lo alquilo por Airbnb con excelente renta."</p>
+            <div class="t-author">
+                <div class="t-avatar">AP</div>
+                <div>
+                    <strong>Agustina Pereyra</strong>
+                    <span>Inversora · Palermo</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"Buenos Aires estaba barata y Briones lo venía diciendo hace años. Lo escuché, actué, y hoy tengo una inversión que vale 30% más que cuando la compré."</p>
+            <div class="t-author">
+                <div class="t-avatar">JM</div>
+                <div>
+                    <strong>Javier Méndez</strong>
+                    <span>Inversor · Recoleta</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonio-card">
+            <div class="t-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p class="t-text">"La transparencia en los costos y el seguimiento de obra es lo que más me impresionó. Siempre supe cómo avanzaba mi departamento. Una experiencia muy profesional."</p>
+            <div class="t-author">
+                <div class="t-avatar">LV</div>
+                <div>
+                    <strong>Laura Villanueva</strong>
+                    <span>Inversora · Belgrano</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="trust-logos reveal">
+        <span>Como aparecimos en:</span>
+        <div class="logos-row">
+            <div class="logo-pill">Infobae</div>
+            <div class="logo-pill">La Nación</div>
+            <div class="logo-pill">Perfil</div>
+            <div class="logo-pill">A24</div>
+            <div class="logo-pill">El Destape</div>
         </div>
     </div>
+</section>
 
-    <div class="footer-bottom">
-        <p>© 2026 GrupoBriones - Emiliano Batista</p>
-        <div class="footer-social-icons">
-            <i class="fab fa-behance"></i>
-            <i class="fab fa-github"></i>
+<!-- ══ CONTACTO ══ -->
+<section class="seccion-contacto" id="contacto">
+    <div class="contacto-grid">
+
+        <div class="contacto-info reveal">
+            <div class="section-tag light"><span></span>Hablemos</div>
+            <h2>¿Listo para<br><em>invertir?</em></h2>
+            <p>Completá el formulario y un asesor especializado te contacta en menos de 24 horas con las mejores opciones disponibles.</p>
+
+            <div class="info-items">
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <strong>Oficina central</strong>
+                        <span>Cerrito 1186, CABA, Argentina</span>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                    <div>
+                        <strong>WhatsApp directo</strong>
+                        <a href="https://wa.me/5491124682070" target="_blank">+54 9 11 2468-2070</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                    <div>
+                        <strong>Email</strong>
+                        <a href="mailto:contacto@grupobriones.com.ar">contacto@grupobriones.com.ar</a>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <strong>Horarios</strong>
+                        <span>Lun–Vie 9:00–18:00 hs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contacto-social">
+                <a href="https://www.instagram.com/grupobriones/?hl=es-la" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@grupobriones" target="_blank"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@beltranbriones" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://wa.me/5491124682070" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
+
+        <div class="contacto-form reveal">
+            <h3>Solicitar información</h3>
+            <form id="mainForm" onsubmit="handleForm(event)">
+                <div class="form-row-2">
+                    <div class="form-group">
+                        <label>Nombre</label>
+                        <input type="text" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Apellido</label>
+                        <input type="text" placeholder="Tu apellido" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Teléfono / WhatsApp</label>
+                    <input type="tel" placeholder="+54 9 11 ...">
+                </div>
+                <div class="form-group">
+                    <label>Proyecto de interés</label>
+                    <select>
+                        <option value="" disabled selected>Seleccioná un proyecto</option>
+                        <option>Brigos I Recoleta — desde USD 115.000</option>
+                        <option>Brigos I Palermo — desde USD 145.000</option>
+                        <option>Casa Huidobro — desde USD 95.000</option>
+                        <option>Quiero conocer todos los proyectos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>¿Cuál es tu objetivo?</label>
+                    <div class="radio-group">
+                        <label class="radio-opt"><input type="radio" name="objetivo" value="vivir"> Vivienda propia</label>
+                        <label class="radio-opt"><input type="radio" name="objetivo" value="invertir"> Inversión / renta</label>
+                        <label class="radio-opt"><input type="radio" name="objetivo" value="ambos"> Ambos</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje (opcional)</label>
+                    <textarea placeholder="Contanos más sobre lo que buscás..." rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn-submit" id="submitBtn">
+                    <i class="fas fa-paper-plane"></i> Quiero más información
+                </button>
+                <p class="form-disclaimer"><i class="fas fa-lock"></i> Tus datos están seguros. No compartimos información con terceros.</p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- ══ FAQ ══ -->
+<section class="seccion-faq">
+    <div class="faq-inner">
+        <div class="section-intro reveal">
+            <div class="section-tag"><span></span>Preguntas frecuentes</div>
+            <h2>Todo lo que necesitás <em>saber</em></h2>
+        </div>
+        <div class="faq-grid reveal">
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Qué es comprar en pozo? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Comprar en pozo significa adquirir un departamento antes o durante su construcción, a un precio más bajo que una unidad terminada. Es la modalidad con mayor potencial de valorización.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Cuánto necesito para empezar? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Podés reservar una unidad con un anticipo desde USD 10.000 y luego financiar el resto en cuotas durante la obra. Consultá las condiciones de cada proyecto.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Cómo se garantiza la entrega? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Todos nuestros proyectos cuentan con seguros de caución y garantías notariales. Además, compartimos updates periódicos del avance de obra con cada inversor.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Puedo pagar en pesos? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Sí. Ofrecemos esquemas de financiación en pesos ajustables y en dólares. Nuestro equipo te asesora para encontrar la opción que mejor se adapte a tu situación.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Qué rentabilidad puedo esperar? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Históricamente, nuestros proyectos en el corredor norte tuvieron una valorización del 25–35% entre la compra en pozo y la entrega. La renta por alquiler temporario puede sumar entre 6% y 10% anual en USD.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-btn" onclick="toggleFaq(this)">
+                    ¿Trabajan con crédito hipotecario? <i class="fas fa-plus"></i>
+                </button>
+                <div class="faq-ans">
+                    <p>Para unidades en entrega inmediata como Casa Huidobro, sí aceptamos créditos UVA de los principales bancos. Para unidades en pozo, trabajamos con financiación propia.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══ CTA BANNER ══ -->
+<section class="cta-banner">
+    <div class="cta-content reveal">
+        <h2>Buenos Aires está <em>barata</em>.<br>El momento de invertir es <em>ahora</em>.</h2>
+        <p>Los precios del m² en CABA subieron 25% desde 2023 y siguen en alza. No esperes al próximo ciclo.</p>
+        <a href="#contacto" class="btn-gold large-btn">
+            <i class="fas fa-arrow-right"></i> Quiero invertir
+        </a>
+    </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer class="footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="inline-logo-white.avif" alt="Grupo Briones" class="footer-logo-img">
+            <p>Desarrollos inmobiliarios de calidad en la Ciudad de Buenos Aires. Transparencia, rentabilidad y entrega garantizada.</p>
+            <div class="footer-social-row">
+                <a href="https://www.instagram.com/grupobriones/?hl=es-la" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@grupobriones" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                <a href="https://youtube.com/@beltranbriones" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/beltran.briones.9" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/5491124682070" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="footer-links-grid">
+            <div class="footer-col">
+                <h4>Proyectos</h4>
+                <ul>
+                    <li><a href="#proyectos">Brigos I Recoleta</a></li>
+                    <li><a href="#proyectos">Brigos I Palermo</a></li>
+                    <li><a href="#proyectos">Casa Huidobro</a></li>
+                    <li><a href="#contacto">Ver todos</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Empresa</h4>
+                <ul>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#">Prensa</a></li>
+                    <li><a href="#">Eventos</a></li>
+                    <li><a href="#">El Club del Ladrillo</a></li>
+                    <li><a href="#">Trabajá con nosotros</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Recursos</h4>
+                <ul>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Guía del inversor</a></li>
+                    <li><a href="#">Calculadora de renta</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li><a href="https://maps.google.com" target="_blank"><i class="fas fa-map-marker-alt"></i> Cerrito 1186, CABA</a></li>
+                    <li><a href="https://wa.me/5491124682070"><i class="fab fa-whatsapp"></i> +54 9 11 2468-2070</a></li>
+                    <li><a href="mailto:contacto@grupobriones.com.ar"><i class="fas fa-envelope"></i> contacto@grupobriones.com.ar</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Grupo Briones — Todos los derechos reservados</p>
+        <div class="footer-bottom-links">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+        </div>
+        <p class="footer-credit">Desarrollado por Emiliano Batista</p>
     </div>
 </footer>
 
+<!-- WhatsApp flotante -->
+<a href="https://wa.me/5491124682070" class="whatsapp-btn" id="waBtn" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">¡Escribinos!</span>
+</a>
 
-
-
-
-
-</body>
+<!-- Back to top -->
+<button class="back-top" id="backTop" aria-label="Volver arriba" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fas fa-arrow-up"></i>
+</button>
 
 <script>
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (!isTouchDevice) {
-        let scrollPos = window.scrollY;
-        let targetPos = window.scrollY;
-        const speed = 0.08; 
-
-        function smoothScroll() {
-            scrollPos += (targetPos - scrollPos) * speed;
-            window.scrollTo(0, scrollPos);
-            requestAnimationFrame(smoothScroll);
+/* ══ LOADER ══ */
+window.addEventListener('load', () => {
+    const fill = document.getElementById('loaderFill');
+    const loader = document.getElementById('loader');
+    let w = 0;
+    const iv = setInterval(() => {
+        w += 4;
+        fill.style.width = w + '%';
+        if (w >= 100) {
+            clearInterval(iv);
+            setTimeout(() => loader.classList.add('hidden'), 300);
         }
+    }, 20);
+});
 
-        window.addEventListener('wheel', (e) => {
-            e.preventDefault(); 
-            targetPos += e.deltaY;
-            targetPos = Math.max(0, Math.min(targetPos, document.documentElement.scrollHeight - window.innerHeight));
-        }, { passive: false });
-
-        smoothScroll();
-    } else {
-        
-        document.documentElement.style.overflow = "auto";
-        document.body.style.overflow = "auto";
+/* ══ SMOOTH SCROLL (desktop only) ══ */
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+if (!isTouchDevice) {
+    let scrollPos = window.scrollY, targetPos = window.scrollY;
+    function smoothScroll() {
+        scrollPos += (targetPos - scrollPos) * 0.08;
+        window.scrollTo(0, scrollPos);
+        requestAnimationFrame(smoothScroll);
     }
+    window.addEventListener('wheel', e => {
+        e.preventDefault();
+        targetPos += e.deltaY;
+        targetPos = Math.max(0, Math.min(targetPos, document.documentElement.scrollHeight - window.innerHeight));
+    }, { passive: false });
+    smoothScroll();
+}
 
+/* ══ REVEAL ══ */
+const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+/* ══ HERO REVEAL ══ */
+setTimeout(() => {
+    document.querySelectorAll('.reveal-hero').forEach((el, i) => {
+        setTimeout(() => el.classList.add('in'), i * 180);
+    });
+}, 800);
+
+/* ══ STATS COUNTER ══ */
+const statsObs = new IntersectionObserver(entries => {
+    if (!entries[0].isIntersecting) return;
+    statsObs.disconnect();
+    document.querySelectorAll('[data-target]').forEach(el => {
+        const target = +el.dataset.target;
+        const prefix = el.dataset.prefix || '';
+        const suffix = el.dataset.suffix || '';
+        let current = 0;
+        const step = target / 60;
+        const iv = setInterval(() => {
+            current = Math.min(current + step, target);
+            el.textContent = prefix + Math.floor(current) + suffix;
+            if (current >= target) clearInterval(iv);
+        }, 20);
+    });
+}, { threshold: 0.5 });
+statsObs.observe(document.getElementById('statsBar'));
+
+/* ══ NAVBAR ══ */
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 80);
+    document.getElementById('waBtn').classList.toggle('show', window.scrollY > 400);
+    document.getElementById('backTop').classList.toggle('show', window.scrollY > 500);
+});
+
+/* ══ HAMBURGER ══ */
+const ham = document.getElementById('hamburger');
+const nav = document.getElementById('navLinks');
+ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    nav.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    ham.classList.remove('open');
+    nav.classList.remove('open');
+    document.body.classList.remove('menu-open');
+}));
+
+/* ══ FILTROS ══ */
+document.querySelectorAll('.filtro-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filtro-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const f = this.dataset.filter;
+        document.querySelectorAll('.tarjeta-propiedad').forEach(card => {
+            const show = f === 'all' || card.dataset.cat === f;
+            card.style.opacity = show ? '1' : '0.25';
+            card.style.transform = show ? 'scale(1)' : 'scale(0.97)';
+            card.style.pointerEvents = show ? 'auto' : 'none';
+        });
+    });
+});
+
+/* ══ CARD FAV ══ */
+document.querySelectorAll('.card-fav').forEach(btn => {
+    btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        this.classList.toggle('active');
+        const icon = this.querySelector('i');
+        icon.classList.toggle('far');
+        icon.classList.toggle('fas');
+    });
+});
+
+/* ══ FAQ ══ */
+function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+}
+
+/* ══ FORM ══ */
+function handleForm(e) {
+    e.preventDefault();
+    const btn = document.getElementById('submitBtn');
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Enviando...';
+    btn.disabled = true;
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fas fa-check"></i> ¡Mensaje enviado! Te contactamos pronto.';
+        btn.style.background = '#10b981';
+        btn.style.cursor = 'default';
+    }, 1400);
+}
 </script>
-
+</body>
 </html>
