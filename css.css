@@ -565,60 +565,198 @@ body.menu-open { overflow: hidden; }
 .back-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
 .back-top:hover { background: var(--navy-dk); }
 
-/* ══ RESPONSIVE ══ */
+/* ══════════════════════════════════════════
+   RESPONSIVE — Mobile First
+══════════════════════════════════════════ */
+
+/* ── Tablet grande (≤1100px) ── */
 @media (max-width: 1100px) {
-    .footer-links-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
-    .footer-top { grid-template-columns: 1fr; gap: 40px; }
-    .footer-brand { max-width: 100%; }
-    .amenities-inner { grid-template-columns: 1fr; }
-    .amenities-grid { grid-template-columns: repeat(4, 1fr); }
-    .contenedor-grid { gap: 48px; }
+    /* Layout */
+    .contenedor-grid       { grid-template-columns: 1fr; gap: 48px; }
+    .amenities-inner       { grid-template-columns: 1fr; }
+    .amenities-grid        { grid-template-columns: repeat(4, 1fr); }
+    .contacto-grid         { grid-template-columns: 1fr; }
+
+    /* Footer */
+    .footer-top            { grid-template-columns: 1fr; gap: 40px; }
+    .footer-brand          { max-width: 100%; }
+    .footer-links-grid     { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+
+    /* Imagenes nosotros */
+    .imagenes-layout       { height: 440px; }
+    .img-badge             { right: 0; bottom: -14px; }
 }
 
+/* ── Tablet (≤900px) ── */
 @media (max-width: 900px) {
+    /* Nav mobile */
     .nav-links {
-        display: none; position: fixed; inset: 0;
+        display: none;
+        position: fixed; inset: 0;
         background: var(--navy-xl);
         flex-direction: column; align-items: center; justify-content: center;
-        gap: 28px; z-index: 499;
+        gap: 32px; z-index: 499;
+        padding: 40px 20px;
     }
-    .nav-links.open { display: flex; }
-    .nav-links a { font-size: 1.1rem; }
-    .nav-cta { padding: 13px 30px !important; }
-    .hamburger { display: flex; }
-    .contenedor-tarjetas { grid-template-columns: 1fr 1fr; }
-    .testimonios-grid { grid-template-columns: 1fr 1fr; }
-    .contenedor-grid { grid-template-columns: 1fr; }
-    .imagenes-layout { height: 380px; }
-    .img-badge { right: 0; bottom: -16px; }
-    .contacto-grid { grid-template-columns: 1fr; }
-    .contacto-info, .contacto-form { padding: 60px 7%; }
-    .proceso-steps { gap: 24px; }
-    .proceso-connector { display: none; }
-    .proceso-step { min-width: 140px; }
+    .nav-links.open        { display: flex; }
+    .nav-links li          { width: 100%; text-align: center; }
+    .nav-links a           { font-size: 1.15rem; padding: 8px 0; display: block; }
+    .nav-cta               { padding: 14px 36px !important; display: inline-flex !important; width: auto !important; }
+    .hamburger             { display: flex; }
+
+    /* Navbar padding */
+    .navbar                { padding: 18px 5%; }
+    .navbar.scrolled       { padding: 12px 5%; }
+    .logo img              { width: 155px; }
+
+    /* Hero */
+    .hero-content          { padding: 48px 5% 40px; }
+    .hero-content h1       { font-size: clamp(2.6rem, 8vw, 3.8rem); }
+    .hero-trust            { flex-wrap: wrap; gap: 8px; padding: 14px 20px; border-radius: 12px; }
+    .trust-sep             { display: none; }
+    .trust-item            { padding: 0 10px; font-size: 0.75rem; }
+
+    /* Stats */
+    .stats-bar             { flex-wrap: wrap; }
+    .stat-item             { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 28px 12px; }
+    .stat-num              { font-size: 2.2rem; }
+
+    /* Proyectos */
+    .section-proyectos     { padding: 72px 5%; }
+    .contenedor-tarjetas   { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Testimonios */
+    .testimonios-grid      { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+    /* Nosotros */
+    .seccion-empresa       { padding: 72px 5%; }
+    .imagenes-layout       { height: 320px; grid-template-columns: 3fr 1fr; }
+    .img-badge             { right: 0; bottom: -12px; padding: 14px 18px; }
+    .img-badge-num         { font-size: 1.6rem; }
+    .valores-grid          { grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    /* Proceso */
+    .seccion-proceso       { padding: 72px 5%; }
+    .proceso-steps         { flex-wrap: wrap; gap: 32px; justify-content: center; }
+    .proceso-connector     { display: none; }
+    .proceso-step          { flex: 1 1 calc(50% - 20px); min-width: 160px; max-width: 220px; }
+
+    /* Amenities */
+    .amenities-texto       { padding: 64px 5%; }
+    .amenities-grid        { grid-template-columns: repeat(4, 1fr); }
+
+    /* Contacto */
+    .contacto-info         { padding: 64px 5%; }
+    .contacto-form         { padding: 60px 5%; }
+    .contacto-info::before { font-size: 180px; }
+
+    /* FAQ */
+    .seccion-faq           { padding: 72px 5%; }
+
+    /* CTA */
+    .cta-banner            { padding: 72px 5%; }
+
+    /* Footer */
+    .footer-top            { padding: 60px 5% 44px; }
+    .footer-links-grid     { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .footer-bottom         { padding: 16px 5%; }
 }
 
+/* ── Mobile (≤600px) ── */
 @media (max-width: 600px) {
-    .top-bar { display: none; }
-    .hero-content h1 { font-size: 2.8rem; }
-    .hero-trust { flex-direction: column; border-radius: 12px; gap: 10px; padding: 16px 20px; }
-    .trust-sep { display: none; }
-    .stats-bar { flex-wrap: wrap; }
-    .stat-item { flex: 1 1 50%; border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .contenedor-tarjetas { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
-    .testimonios-grid { grid-template-columns: 1fr; }
-    .valores-grid { grid-template-columns: 1fr; }
-    .form-row-2 { grid-template-columns: 1fr; }
-    .amenities-grid { grid-template-columns: repeat(4, 1fr); }
-    .section-proyectos, .seccion-empresa, .seccion-proceso, .seccion-testimonios, .seccion-faq, .cta-banner { padding: 64px 5%; }
-    .amenities-texto { padding: 64px 5%; }
-    .footer-links-grid { grid-template-columns: 1fr 1fr; }
-    .footer-bottom { flex-direction: column; text-align: center; }
-    .proceso-steps { flex-direction: column; align-items: center; }
+    /* Top bar */
+    .top-bar               { display: none; }
+
+    /* Hero */
+    .hero                  { background-attachment: scroll; }
+    .hero-content          { padding: 40px 5% 36px; }
+    .hero-content h1       { font-size: 2.6rem; letter-spacing: 0.02em; }
+    .hero-sub              { font-size: 0.9rem; }
+    .hero-actions          { flex-direction: column; width: 100%; max-width: 320px; }
+    .btn-gold,
+    .btn-outline-white     { justify-content: center; width: 100%; padding: 16px 20px; }
+    .hero-trust            { flex-direction: column; align-items: flex-start; padding: 16px 18px; gap: 10px; }
+    .hero-scroll-hint      { display: none; }
+
+    /* Stats */
+    .stat-item             { flex: 1 1 100%; padding: 22px 16px; }
+    .stat-item:last-child  { border-bottom: none; }
+
+    /* Filtros */
+    .filtros               { gap: 8px; }
+    .filtro-btn            { padding: 8px 16px; font-size: 0.78rem; }
+
+    /* Tarjetas — 1 columna */
+    .contenedor-tarjetas   { grid-template-columns: 1fr; max-width: 100%; gap: 16px; }
+    .imagen-tag            { height: 220px; }
+    .proyectos-cta         { padding: 28px 20px; }
+
+    /* Testimonios — 1 columna */
+    .testimonios-grid      { grid-template-columns: 1fr; }
+    .trust-logos           { margin-top: 36px; }
+    .logos-row             { gap: 8px; }
+    .logo-pill             { font-size: 0.75rem; padding: 6px 14px; }
+
+    /* Nosotros */
+    .imagenes-layout       { height: 260px; grid-template-columns: 1fr; }
+    .imagen-secundaria     { display: none; }
+    .img-badge             { right: 12px; bottom: 12px; position: absolute; }
+    .valores-grid          { grid-template-columns: 1fr; }
+    .valor-item            { padding: 14px; }
+    .empresa-titulo        { font-size: 1.85rem; }
+
+    /* Proceso — 1 columna */
+    .proceso-steps         { flex-direction: column; align-items: center; gap: 28px; }
+    .proceso-step          { max-width: 100%; width: 100%; padding: 0 0; }
+
+    /* Amenities */
+    .amenities-inner       { grid-template-columns: 1fr; }
+    .amenities-texto       { padding: 56px 5%; }
+    .amenities-grid        { grid-template-columns: repeat(4, 1fr); gap: 1px; }
+    .am-card               { padding: 24px 8px; }
+    .am-icon               { width: 42px; height: 42px; font-size: 1rem; }
+    .am-card span          { font-size: 0.68rem; }
+
+    /* Contacto */
+    .contacto-info         { padding: 56px 5%; }
+    .contacto-form         { padding: 48px 5%; }
+    .form-row-2            { grid-template-columns: 1fr; }
+    .radio-group           { flex-direction: column; gap: 8px; }
+    .info-items            { gap: 14px; }
+
+    /* FAQ */
+    .faq-btn               { padding: 18px 20px; font-size: 0.88rem; }
+    .faq-ans p             { padding: 0 20px 18px; }
+
+    /* CTA Banner */
+    .cta-banner            { padding: 60px 5%; }
+    .cta-content h2        { font-size: 1.9rem; }
+    .large-btn             { padding: 16px 32px !important; font-size: 0.88rem !important; }
+
+    /* Section intro */
+    .section-intro         { margin-bottom: 36px; }
+    .section-intro h2      { font-size: 1.9rem; }
+
+    /* Footer */
+    .footer-top            { padding: 48px 5% 36px; }
+    .footer-links-grid     { grid-template-columns: 1fr 1fr; gap: 24px; }
+    .footer-bottom         { flex-direction: column; text-align: center; gap: 6px; padding: 16px 5%; }
+    .footer-bottom-links   { gap: 16px; }
+
+    /* Floating buttons */
+    .whatsapp-btn          { width: 50px; height: 50px; font-size: 1.4rem; bottom: 20px; right: 16px; }
+    .back-top              { width: 38px; height: 38px; font-size: 0.82rem; bottom: 80px; right: 16px; }
+    .wa-tooltip            { display: none; }
 }
 
+/* ── Mobile chico (≤400px) ── */
 @media (max-width: 400px) {
-    .hero-content h1 { font-size: 2.2rem; }
-    .hero-actions { flex-direction: column; width: 100%; }
-    .btn-gold, .btn-outline-white { justify-content: center; }
+    .hero-content h1       { font-size: 2.1rem; }
+    .navbar                { padding: 16px 4%; }
+    .logo img              { width: 130px; }
+    .amenities-grid        { grid-template-columns: repeat(2, 1fr); }
+    .footer-links-grid     { grid-template-columns: 1fr; gap: 20px; }
+    .stat-num              { font-size: 1.9rem; }
+    .filtros               { justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; }
+    .filtro-btn            { white-space: nowrap; flex-shrink: 0; }
 }
